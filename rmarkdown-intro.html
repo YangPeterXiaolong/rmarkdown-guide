@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>第 1 章 R Markdown概述 | R Markdown 指南</title>
   <meta name="description" content="第 1 章 R Markdown概述 | R Markdown 指南" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
   <meta property="og:title" content="第 1 章 R Markdown概述 | R Markdown 指南" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="第 1 章 R Markdown概述 | R Markdown 指南" />
   <meta name="github-repo" content="cosname/rmarkdown-guide" />
@@ -21,13 +20,14 @@
   <meta name="twitter:description" content="第 1 章 R Markdown概述 | R Markdown 指南" />
   
 
+<meta name="author" content="高春辉" />
 <meta name="author" content="王祎帆" />
 <meta name="author" content="闫求识" />
-<meta name="author" content="高春辉" />
 <meta name="author" content="庄亮亮" />
+<meta name="author" content="杨晓龙" />
 
 
-<meta name="date" content="2021-12-05" />
+<meta name="date" content="2022-05-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -36,15 +36,15 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="rmarkdown-base.html"/>
-<script src="libs/header-attrs/header-attrs.js"></script>
-<script src="libs/jquery/jquery-3.6.0.min.js"></script>
-<link href="libs/gitbook/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -53,11 +53,11 @@
 
 
 
-
-<link href="libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections/anchor-sections.js"></script>
-<script src="libs/kePrint/kePrint.js"></script>
-<link href="libs/lightable/lightable.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -164,20 +164,26 @@ div.csl-indent {
 <li><a href="./">R Markdown 中文指南</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#为什么要写这样一本书"><i class="fa fa-check"></i><b>0.1</b> 为什么要写这样一本书？</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#本书是怎么写出来的"><i class="fa fa-check"></i><b>0.2</b> 本书是怎么写出来的？</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#本书的创作理念是什么"><i class="fa fa-check"></i><b>0.3</b> 本书的创作理念是什么？</a></li>
+<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#本书主要有哪些内容"><i class="fa fa-check"></i><b>0.4</b> 本书主要有哪些内容？</a></li>
+<li class="chapter" data-level="0.5" data-path="index.html"><a href="index.html#阅读本书时的注意事项"><i class="fa fa-check"></i><b>0.5</b> 阅读本书时的注意事项</a></li>
+</ul></li>
 <li class="part"><span><b>I 初识 R Markdown</b></span></li>
 <li class="chapter" data-level="1" data-path="rmarkdown-intro.html"><a href="rmarkdown-intro.html"><i class="fa fa-check"></i><b>1</b> R Markdown概述</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="rmarkdown-intro.html"><a href="rmarkdown-intro.html#rmarkdown-source"><i class="fa fa-check"></i><b>1.1</b> R Markdown 的渊源</a>
 <ul>
-<li class="chapter" data-level="1.1.1" data-path="rmarkdown-intro.html"><a href="rmarkdown-intro.html#knitr-sweave"><i class="fa fa-check"></i><b>1.1.1</b> knitr 和 Sweave</a></li>
-<li class="chapter" data-level="1.1.2" data-path="rmarkdown-intro.html"><a href="rmarkdown-intro.html#mark-pandoc"><i class="fa fa-check"></i><b>1.1.2</b> 标记语言和 Pandoc 转换器</a></li>
+<li class="chapter" data-level="1.1.1" data-path="rmarkdown-intro.html"><a href="rmarkdown-intro.html#r-markdown-literate-programming"><i class="fa fa-check"></i><b>1.1.1</b> R Markdown 与文学化编程</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="rmarkdown-intro.html"><a href="rmarkdown-intro.html#rmarkdown-example"><i class="fa fa-check"></i><b>1.2</b> 以案例形式初识 R Markdown</a>
 <ul>
 <li class="chapter" data-level="1.2.1" data-path="rmarkdown-intro.html"><a href="rmarkdown-intro.html#example-report"><i class="fa fa-check"></i><b>1.2.1</b> 数据分析报告</a></li>
 <li class="chapter" data-level="1.2.2" data-path="rmarkdown-intro.html"><a href="rmarkdown-intro.html#example-note"><i class="fa fa-check"></i><b>1.2.2</b> 交互笔记本</a></li>
-<li class="chapter" data-level="1.2.3" data-path="rmarkdown-intro.html"><a href="rmarkdown-intro.html#example-report"><i class="fa fa-check"></i><b>1.2.3</b> 个人简历</a></li>
+<li class="chapter" data-level="1.2.3" data-path="rmarkdown-intro.html"><a href="rmarkdown-intro.html#example-cv"><i class="fa fa-check"></i><b>1.2.3</b> 个人简历</a></li>
 <li class="chapter" data-level="1.2.4" data-path="rmarkdown-intro.html"><a href="rmarkdown-intro.html#example-resume"><i class="fa fa-check"></i><b>1.2.4</b> 网站</a></li>
 <li class="chapter" data-level="1.2.5" data-path="rmarkdown-intro.html"><a href="rmarkdown-intro.html#example-ppt"><i class="fa fa-check"></i><b>1.2.5</b> 幻灯片</a></li>
 <li class="chapter" data-level="1.2.6" data-path="rmarkdown-intro.html"><a href="rmarkdown-intro.html#example-forms"><i class="fa fa-check"></i><b>1.2.6</b> 交互报表</a></li>
@@ -191,7 +197,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="2.2.1" data-path="rmarkdown-base.html"><a href="rmarkdown-base.html#install-rmd"><i class="fa fa-check"></i><b>2.2.1</b> 安装 R Markdown</a></li>
 <li class="chapter" data-level="2.2.2" data-path="rmarkdown-base.html"><a href="rmarkdown-base.html#install-tinytex"><i class="fa fa-check"></i><b>2.2.2</b> 安装 Tinytex</a></li>
-<li class="chapter" data-level="2.2.3" data-path="rmarkdown-base.html"><a href="rmarkdown-base.html#安装-git-install-git"><i class="fa fa-check"></i><b>2.2.3</b> 安装 Git（*） {#install-git}</a></li>
+<li class="chapter" data-level="2.2.3" data-path="rmarkdown-base.html"><a href="rmarkdown-base.html#install-git"><i class="fa fa-check"></i><b>2.2.3</b> 安装 Git (*)</a></li>
 <li class="chapter" data-level="2.2.4" data-path="rmarkdown-base.html"><a href="rmarkdown-base.html#install-graph"><i class="fa fa-check"></i><b>2.2.4</b> 安装 RStudio 图形化编辑器</a></li>
 <li class="chapter" data-level="2.2.5" data-path="rmarkdown-base.html"><a href="rmarkdown-base.html#create-rmd"><i class="fa fa-check"></i><b>2.2.5</b> 创建第一个 R Markdown 文档</a></li>
 </ul></li>
@@ -225,7 +231,7 @@ div.csl-indent {
 <li class="chapter" data-level="2.6.9" data-path="rmarkdown-base.html"><a href="rmarkdown-base.html#element-gantt"><i class="fa fa-check"></i><b>2.6.9</b> 甘特图</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>II 基于R Markdown的应用</b></span></li>
+<li class="part"><span><b>II 基于 R Markdown 的应用</b></span></li>
 <li class="chapter" data-level="3" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html"><i class="fa fa-check"></i><b>3</b> 使用 R Markdown 创建常用文档</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#rmarkdown-html"><i class="fa fa-check"></i><b>3.1</b> HTML 文档</a>
@@ -239,16 +245,24 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="3.2.1" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#pdf-rmd"><i class="fa fa-check"></i><b>3.2.1</b> 从 R Markdown 到 PDF 文档</a></li>
 <li class="chapter" data-level="3.2.2" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#pdf-chinese"><i class="fa fa-check"></i><b>3.2.2</b> 在 PDF 文档中使用中文的注意事项</a></li>
-<li class="chapter" data-level="3.2.3" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#pdf-latex"><i class="fa fa-check"></i><b>3.2.3</b> LaTeX 选项</a></li>
+<li class="chapter" data-level="3.2.3" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#pdf-general-setting"><i class="fa fa-check"></i><b>3.2.3</b> 与 HTML 文档中相通的一些设置</a></li>
+<li class="chapter" data-level="3.2.4" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#pdf-latex"><i class="fa fa-check"></i><b>3.2.4</b> LaTeX 选项</a></li>
+<li class="chapter" data-level="3.2.5" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#pdf-latex-citation"><i class="fa fa-check"></i><b>3.2.5</b> 使用 LaTeX 包处理参考文献</a></li>
+<li class="chapter" data-level="3.2.6" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#pdf-latex-engine"><i class="fa fa-check"></i><b>3.2.6</b> LaTeX 的渲染引擎</a></li>
+<li class="chapter" data-level="3.2.7" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#pdf-keep-tex"><i class="fa fa-check"></i><b>3.2.7</b> 保留生成的 TeX 中间文件</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#rmarkdown-ppt"><i class="fa fa-check"></i><b>3.3</b> PPT幻灯片</a>
+<li class="chapter" data-level="3.3" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#rmarkdown-ppt"><i class="fa fa-check"></i><b>3.3</b> PPT 幻灯片</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#ppt-rmd"><i class="fa fa-check"></i><b>3.3.1</b> R Markdown 基础幻灯片</a></li>
-<li class="chapter" data-level="3.3.2" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#ppt-xaringan"><i class="fa fa-check"></i><b>3.3.2</b> Xaringan 幻灯片</a></li>
+<li class="chapter" data-level="3.3.1" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#ioslides-presentation"><i class="fa fa-check"></i><b>3.3.1</b> ioslides 幻灯片</a></li>
+<li class="chapter" data-level="3.3.2" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#slidy-presentation"><i class="fa fa-check"></i><b>3.3.2</b> Slidy 幻灯片</a></li>
+<li class="chapter" data-level="3.3.3" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#beamer-presentation"><i class="fa fa-check"></i><b>3.3.3</b> Beamer 幻灯片</a></li>
+<li class="chapter" data-level="3.3.4" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#powerpoint-presentation"><i class="fa fa-check"></i><b>3.3.4</b> PowerPoint 幻灯片</a></li>
+<li class="chapter" data-level="3.3.5" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#ppt-xaringan"><i class="fa fa-check"></i><b>3.3.5</b> Xaringan 幻灯片</a></li>
+<li class="chapter" data-level="3.3.6" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#xaringan-extension"><i class="fa fa-check"></i><b>3.3.6</b> Xaringan 幻灯片的扩展包</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#rmarkdown-word"><i class="fa fa-check"></i><b>3.4</b> Word 文档</a>
 <ul>
-<li class="chapter" data-level="3.4.1" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#word-template"><i class="fa fa-check"></i><b>3.4.1</b> 创建 Word 模板</a></li>
+<li class="chapter" data-level="3.4.1" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#word-template"><i class="fa fa-check"></i><b>3.4.1</b> 创建 word 模板</a></li>
 <li class="chapter" data-level="3.4.2" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#word-custom-template"><i class="fa fa-check"></i><b>3.4.2</b> 自定义 Word 模板</a></li>
 <li class="chapter" data-level="3.4.3" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#word-rmd"><i class="fa fa-check"></i><b>3.4.3</b> R Markdown 和 Word 之间的双向工作流程</a></li>
 <li class="chapter" data-level="3.4.4" data-path="rmarkdown-document.html"><a href="rmarkdown-document.html#word-style"><i class="fa fa-check"></i><b>3.4.4</b> 个人风格元素</a></li>
@@ -262,20 +276,28 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="4" data-path="rmarkdown-working.html"><a href="rmarkdown-working.html"><i class="fa fa-check"></i><b>4</b> 基于 R Markdown 工作与学习</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="rmarkdown-working.html"><a href="rmarkdown-working.html#rmarkdown-email"><i class="fa fa-check"></i><b>4.1</b> 发邮件：blastula</a></li>
-<li class="chapter" data-level="4.2" data-path="rmarkdown-working.html"><a href="rmarkdown-working.html#rmarkdown-package"><i class="fa fa-check"></i><b>4.2</b> 制作 R 包：fusen</a></li>
-<li class="chapter" data-level="4.3" data-path="rmarkdown-working.html"><a href="rmarkdown-working.html#rmarkdown-cv"><i class="fa fa-check"></i><b>4.3</b> 制作简历：datadrivencv</a></li>
-<li class="chapter" data-level="4.4" data-path="rmarkdown-working.html"><a href="rmarkdown-working.html#rmarkdown-bookdown"><i class="fa fa-check"></i><b>4.4</b> 写书和记学习笔记：bookdown</a></li>
-<li class="chapter" data-level="4.5" data-path="rmarkdown-working.html"><a href="rmarkdown-working.html#rmarkdown-blogdown"><i class="fa fa-check"></i><b>4.5</b> 制作网站：blogdown</a></li>
-<li class="chapter" data-level="4.6" data-path="rmarkdown-working.html"><a href="rmarkdown-working.html#rmarkdown-paper"><i class="fa fa-check"></i><b>4.6</b> 制作科技论文的支撑材料</a></li>
+<li class="chapter" data-level="4.1" data-path="rmarkdown-working.html"><a href="rmarkdown-working.html#rmarkdown-email"><i class="fa fa-check"></i><b>4.1</b> 发邮件：<code>blastula</code></a></li>
+<li class="chapter" data-level="4.2" data-path="rmarkdown-working.html"><a href="rmarkdown-working.html#rmarkdown-package"><i class="fa fa-check"></i><b>4.2</b> 制作 R 包：<code>fusen</code></a></li>
+<li class="chapter" data-level="4.3" data-path="rmarkdown-working.html"><a href="rmarkdown-working.html#rmarkdown-cv"><i class="fa fa-check"></i><b>4.3</b> 制作简历：<code>datadrivencv</code></a></li>
+<li class="chapter" data-level="4.4" data-path="rmarkdown-working.html"><a href="rmarkdown-working.html#rmarkdown-bookdown"><i class="fa fa-check"></i><b>4.4</b> 写书和记学习笔记：<code>bookdown</code></a></li>
+<li class="chapter" data-level="4.5" data-path="rmarkdown-working.html"><a href="rmarkdown-working.html#rmarkdown-blogdown"><i class="fa fa-check"></i><b>4.5</b> 制作网站：<code>blogdown</code></a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="rmarkdown-working.html"><a href="rmarkdown-working.html#blogdown-intro"><i class="fa fa-check"></i><b>4.5.1</b> blogdown 简介</a></li>
+<li class="chapter" data-level="4.5.2" data-path="rmarkdown-working.html"><a href="rmarkdown-working.html#blogdown-steps"><i class="fa fa-check"></i><b>4.5.2</b> 具体操作</a></li>
 </ul></li>
-<li class="part"><span><b>III R Markdown进阶操作</b></span></li>
+<li class="chapter" data-level="4.6" data-path="rmarkdown-working.html"><a href="rmarkdown-working.html#rmarkdown-paper"><i class="fa fa-check"></i><b>4.6</b> 制作科技论文的支撑材料</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="rmarkdown-working.html"><a href="rmarkdown-working.html#建议文件结构"><i class="fa fa-check"></i><b>4.6.1</b> 建议文件结构</a></li>
+<li class="chapter" data-level="4.6.2" data-path="rmarkdown-working.html"><a href="rmarkdown-working.html#分析报告的正文"><i class="fa fa-check"></i><b>4.6.2</b> 分析报告的正文</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>III R Markdown 进阶操作</b></span></li>
 <li class="chapter" data-level="5" data-path="rmarkdown-interaction.html"><a href="rmarkdown-interaction.html"><i class="fa fa-check"></i><b>5</b> 使用 R Markdown 创建动态交互文档</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="rmarkdown-interaction.html"><a href="rmarkdown-interaction.html#rmarkdown-shiny"><i class="fa fa-check"></i><b>5.1</b> Web交互界面：Shiny小程序</a>
+<li class="chapter" data-level="5.1" data-path="rmarkdown-interaction.html"><a href="rmarkdown-interaction.html#rmarkdown-shiny"><i class="fa fa-check"></i><b>5.1</b> Web 交互界面：Shiny 小程序</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="rmarkdown-interaction.html"><a href="rmarkdown-interaction.html#shiny-intro"><i class="fa fa-check"></i><b>5.1.1</b> Shiny 入门指南</a></li>
-<li class="chapter" data-level="5.1.2" data-path="rmarkdown-interaction.html"><a href="rmarkdown-interaction.html#shiny-deploy"><i class="fa fa-check"></i><b>5.1.2</b> Shiny 的部署</a></li>
+<li class="chapter" data-level="5.1.1" data-path="rmarkdown-interaction.html"><a href="rmarkdown-interaction.html#shiny-start"><i class="fa fa-check"></i><b>5.1.1</b> 入门指南</a></li>
+<li class="chapter" data-level="5.1.2" data-path="rmarkdown-interaction.html"><a href="rmarkdown-interaction.html#shiny-deploy"><i class="fa fa-check"></i><b>5.1.2</b> Shiny 部署</a></li>
 <li class="chapter" data-level="5.1.3" data-path="rmarkdown-interaction.html"><a href="rmarkdown-interaction.html#shiny-app"><i class="fa fa-check"></i><b>5.1.3</b> 嵌入 Shiny 应用程序</a></li>
 <li class="chapter" data-level="5.1.4" data-path="rmarkdown-interaction.html"><a href="rmarkdown-interaction.html#shiny-widget"><i class="fa fa-check"></i><b>5.1.4</b> Shiny 小部件</a></li>
 <li class="chapter" data-level="5.1.5" data-path="rmarkdown-interaction.html"><a href="rmarkdown-interaction.html#shiny-link"><i class="fa fa-check"></i><b>5.1.5</b> Shiny 文档间的链接</a></li>
@@ -291,7 +313,8 @@ div.csl-indent {
 <li class="chapter" data-level="5.3" data-path="rmarkdown-interaction.html"><a href="rmarkdown-interaction.html#package-rmd"><i class="fa fa-check"></i><b>5.3</b> 在 R package 中使用 R Markdown</a>
 <ul>
 <li class="chapter" data-level="5.3.1" data-path="rmarkdown-interaction.html"><a href="rmarkdown-interaction.html#rmd-vignettes"><i class="fa fa-check"></i><b>5.3.1</b> 写软件包的文档</a></li>
-<li class="chapter" data-level="5.3.2" data-path="rmarkdown-interaction.html"><a href="rmarkdown-interaction.html#rmd-auto"><i class="fa fa-check"></i><b>5.3.2</b> 定义一个自动化报告函数</a></li>
+<li class="chapter" data-level="5.3.2" data-path="rmarkdown-interaction.html"><a href="rmarkdown-interaction.html#package-template"><i class="fa fa-check"></i><b>5.3.2</b> R 包中的 R Markdown 模板</a></li>
+<li class="chapter" data-level="5.3.3" data-path="rmarkdown-interaction.html"><a href="rmarkdown-interaction.html#rmd-auto"><i class="fa fa-check"></i><b>5.3.3</b> 定义一个自动化报告函数</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html"><i class="fa fa-check"></i><b>6</b> R Markdown 的操作技巧</a>
@@ -306,58 +329,64 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="6.2.1" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-variable"><i class="fa fa-check"></i><b>6.2.1</b> 在块选项中使用变量</a></li>
 <li class="chapter" data-level="6.2.2" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-error"><i class="fa fa-check"></i><b>6.2.2</b> 如何在遇到 error 的时候继续编译</a></li>
-<li class="chapter" data-level="6.2.3" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-cache"><i class="fa fa-check"></i><b>6.2.3</b> 缓存代码块</a></li>
-<li class="chapter" data-level="6.2.4" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-asis"><i class="fa fa-check"></i><b>6.2.4</b> 通过 asis 引擎有条件地执行内容</a></li>
-<li class="chapter" data-level="6.2.5" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-shell"><i class="fa fa-check"></i><b>6.2.5</b> 执行 Shell 脚本</a></li>
-<li class="chapter" data-level="6.2.6" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-output"><i class="fa fa-check"></i><b>6.2.6</b> 控制输出</a></li>
-<li class="chapter" data-level="6.2.7" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-reformat"><i class="fa fa-check"></i><b>6.2.7</b> 重新格式化源代码</a></li>
-<li class="chapter" data-level="6.2.8" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-leading"><i class="fa fa-check"></i><b>6.2.8</b> 删除文本输出中的前导符号</a></li>
-<li class="chapter" data-level="6.2.9" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#为文本输出块添加属性-chunk-property"><i class="fa fa-check"></i><b>6.2.9</b> 为文本输出块添加属性 (*) {#chunk-property}</a></li>
-<li class="chapter" data-level="6.2.10" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-multiplot"><i class="fa fa-check"></i><b>6.2.10</b> 同一张图的多种图像输出格式</a></li>
-<li class="chapter" data-level="6.2.11" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#图像的后期加工-chunk-process"><i class="fa fa-check"></i><b>6.2.11</b> 图像的后期加工 (*) {#chunk-process}</a></li>
-<li class="chapter" data-level="6.2.12" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#输出高质量的图像-chunk-highquality"><i class="fa fa-check"></i><b>6.2.12</b> 输出高质量的图像 (*) {#chunk-highquality}</a></li>
-<li class="chapter" data-level="6.2.13" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#带有低级绘图功能的逐步绘图-chunk-step-plot"><i class="fa fa-check"></i><b>6.2.13</b> 带有低级绘图功能的逐步绘图 (*) {#chunk-step-plot}</a></li>
-<li class="chapter" data-level="6.2.14" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#在代码块中自定义对象的打印格式-chunk-print"><i class="fa fa-check"></i><b>6.2.14</b> 在代码块中自定义对象的打印格式 (*) {#chunk-print}</a></li>
-<li class="chapter" data-level="6.2.15" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#选项钩子-option-hook"><i class="fa fa-check"></i><b>6.2.15</b> 选项钩子 (*) {#option-hook}</a></li>
+<li class="chapter" data-level="6.2.3" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-output"><i class="fa fa-check"></i><b>6.2.3</b> 控制输出</a></li>
+<li class="chapter" data-level="6.2.4" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-reformat"><i class="fa fa-check"></i><b>6.2.4</b> 重新格式化源代码</a></li>
+<li class="chapter" data-level="6.2.5" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-leading"><i class="fa fa-check"></i><b>6.2.5</b> 调整文本输出中的前导符号</a></li>
+<li class="chapter" data-level="6.2.6" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-property"><i class="fa fa-check"></i><b>6.2.6</b> 为文本输出块添加属性 (*)</a></li>
+<li class="chapter" data-level="6.2.7" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-multiplot"><i class="fa fa-check"></i><b>6.2.7</b> 同一张图的多种图像输出格式</a></li>
+<li class="chapter" data-level="6.2.8" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-process"><i class="fa fa-check"></i><b>6.2.8</b> 图像的后期加工 (*)</a></li>
+<li class="chapter" data-level="6.2.9" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-highquality"><i class="fa fa-check"></i><b>6.2.9</b> 输出高质量的图像 (*)</a></li>
+<li class="chapter" data-level="6.2.10" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-step-plot"><i class="fa fa-check"></i><b>6.2.10</b> 带有低级绘图功能的逐步绘图 (*)</a></li>
+<li class="chapter" data-level="6.2.11" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-print"><i class="fa fa-check"></i><b>6.2.11</b> 在代码块中自定义对象的打印格式 (*)</a></li>
+<li class="chapter" data-level="6.2.12" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#option-hook"><i class="fa fa-check"></i><b>6.2.12</b> 选项钩子 (*)</a></li>
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#other-language"><i class="fa fa-check"></i><b>6.3</b> 与其他语言的结合</a>
 <ul>
-<li class="chapter" data-level="6.3.1" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#注册自定义语言引擎-register-language"><i class="fa fa-check"></i><b>6.3.1</b> 注册自定义语言引擎 (*) {#register-language}</a></li>
+<li class="chapter" data-level="6.3.1" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#register-language"><i class="fa fa-check"></i><b>6.3.1</b> 注册自定义语言引擎 (*)</a></li>
 <li class="chapter" data-level="6.3.2" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#python-rmd"><i class="fa fa-check"></i><b>6.3.2</b> 运行 Python 代码并与 Python 交互</a></li>
-<li class="chapter" data-level="6.3.3" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#cat-file"><i class="fa fa-check"></i><b>6.3.3</b> 通过 cat 引擎将块内容写入文件</a></li>
-<li class="chapter" data-level="6.3.4" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#sas-rmd"><i class="fa fa-check"></i><b>6.3.4</b> 运行 SAS 代码</a></li>
-<li class="chapter" data-level="6.3.5" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#stata-rmd"><i class="fa fa-check"></i><b>6.3.5</b> 运行 Stata 代码</a></li>
-<li class="chapter" data-level="6.3.6" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#asymptote-plot"><i class="fa fa-check"></i><b>6.3.6</b> 用渐近线 Asymptote 创建图形</a></li>
-<li class="chapter" data-level="6.3.7" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#sass-scss"><i class="fa fa-check"></i><b>6.3.7</b> 使用 Sass/SCSS 构建 HTML 页面</a></li>
+<li class="chapter" data-level="6.3.3" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-asis"><i class="fa fa-check"></i><b>6.3.3</b> 通过 <code>asis</code> 引擎有条件地执行内容</a></li>
+<li class="chapter" data-level="6.3.4" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-shell"><i class="fa fa-check"></i><b>6.3.4</b> 执行 Shell 脚本</a></li>
+<li class="chapter" data-level="6.3.5" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#cat-file"><i class="fa fa-check"></i><b>6.3.5</b> 通过 cat 引擎将块内容写入文件</a></li>
+<li class="chapter" data-level="6.3.6" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#sas-rmd"><i class="fa fa-check"></i><b>6.3.6</b> 运行 SAS 代码</a></li>
+<li class="chapter" data-level="6.3.7" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#stata-rmd"><i class="fa fa-check"></i><b>6.3.7</b> 运行 Stata 代码</a></li>
+<li class="chapter" data-level="6.3.8" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#asymptote-plot"><i class="fa fa-check"></i><b>6.3.8</b> 用渐近线 Asymptote 创建图形</a></li>
+<li class="chapter" data-level="6.3.9" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#sass-scss"><i class="fa fa-check"></i><b>6.3.9</b> 使用 Sass/SCSS 构建 HTML 页面</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#输出钩子-output-hook"><i class="fa fa-check"></i><b>6.4</b> 输出钩子 (*) {#output-hook}</a>
+<li class="chapter" data-level="6.4" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#output-hook"><i class="fa fa-check"></i><b>6.4</b> 输出钩子 (*)</a>
 <ul>
 <li class="chapter" data-level="6.4.1" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#edit-source"><i class="fa fa-check"></i><b>6.4.1</b> 编辑源代码</a></li>
 <li class="chapter" data-level="6.4.2" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#source-index"><i class="fa fa-check"></i><b>6.4.2</b> 向源代码中添加行号</a></li>
 <li class="chapter" data-level="6.4.3" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#scrollable-output"><i class="fa fa-check"></i><b>6.4.3</b> 可滚动的文本输出</a></li>
 <li class="chapter" data-level="6.4.4" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#truncated-output"><i class="fa fa-check"></i><b>6.4.4</b> 截断文本输出</a></li>
-<li class="chapter" data-level="6.4.5" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#html5-plot"><i class="fa fa-check"></i><b>6.4.5</b> 以HTML5格式输出图像</a></li>
+<li class="chapter" data-level="6.4.5" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#html5-plot"><i class="fa fa-check"></i><b>6.4.5</b> 以 HTML5 格式输出图像</a></li>
 </ul></li>
-<li class="chapter" data-level="6.5" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#其它使用-knitr-的小技巧-other-trick"><i class="fa fa-check"></i><b>6.5</b> 其它使用 knitr 的小技巧 (*) {#other-trick}</a>
+<li class="chapter" data-level="6.5" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#cache"><i class="fa fa-check"></i><b>6.5</b> 缓存 (*)</a>
 <ul>
-<li class="chapter" data-level="6.5.1" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#reuse-chunk"><i class="fa fa-check"></i><b>6.5.1</b> 重复使用代码块</a></li>
-<li class="chapter" data-level="6.5.2" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#在创建对象之前使用它-use-creat"><i class="fa fa-check"></i><b>6.5.2</b> 在创建对象之前使用它 (*) {#use-creat}</a></li>
-<li class="chapter" data-level="6.5.3" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#compile-exit"><i class="fa fa-check"></i><b>6.5.3</b> 提前退出编译</a></li>
-<li class="chapter" data-level="6.5.4" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#plot-show-else"><i class="fa fa-check"></i><b>6.5.4</b> 生成一个图像并在其他地方显示</a></li>
-<li class="chapter" data-level="6.5.5" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#modify-before"><i class="fa fa-check"></i><b>6.5.5</b> 修改前一个代码块中的图像</a></li>
-<li class="chapter" data-level="6.5.6" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#保存一组块选项并重复使用它们-reuse-option"><i class="fa fa-check"></i><b>6.5.6</b> 保存一组块选项并重复使用它们 (*) {#reuse-option}</a></li>
-<li class="chapter" data-level="6.5.7" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#knit-expand"><i class="fa fa-check"></i><b>6.5.7</b> 使用 knitr::knit_expand() 来生成 Rmd 源代码</a></li>
-<li class="chapter" data-level="6.5.8" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#允许代码块中的标签重复-repeat-label"><i class="fa fa-check"></i><b>6.5.8</b> 允许代码块中的标签重复 (*) {#repeat-label}</a></li>
+<li class="chapter" data-level="6.5.1" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#chunk-cache"><i class="fa fa-check"></i><b>6.5.1</b> 缓存耗时的代码块</a></li>
+<li class="chapter" data-level="6.5.2" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#cache-path"><i class="fa fa-check"></i><b>6.5.2</b> 为多种输出格式缓存代码块</a></li>
+<li class="chapter" data-level="6.5.3" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#cache-lazy"><i class="fa fa-check"></i><b>6.5.3</b> 缓存大型的对象</a></li>
+<li class="chapter" data-level="6.5.4" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#cache-rds"><i class="fa fa-check"></i><b>6.5.4</b> 一个更透明的缓存机制</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#other-trick"><i class="fa fa-check"></i><b>6.6</b> 其它使用 knitr 的小技巧 (*)</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#reuse-chunk"><i class="fa fa-check"></i><b>6.6.1</b> 重复使用代码块</a></li>
+<li class="chapter" data-level="6.6.2" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#use-creat"><i class="fa fa-check"></i><b>6.6.2</b> 在创建对象之前使用它 (*)</a></li>
+<li class="chapter" data-level="6.6.3" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#compile-exit"><i class="fa fa-check"></i><b>6.6.3</b> 提前退出编译</a></li>
+<li class="chapter" data-level="6.6.4" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#plot-show-else"><i class="fa fa-check"></i><b>6.6.4</b> 生成一个图像并在其他地方显示</a></li>
+<li class="chapter" data-level="6.6.5" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#modify-before"><i class="fa fa-check"></i><b>6.6.5</b> 修改之前代码块中的图像</a></li>
+<li class="chapter" data-level="6.6.6" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#reuse-option"><i class="fa fa-check"></i><b>6.6.6</b> 保存一组块选项并重复使用它们 (*)</a></li>
+<li class="chapter" data-level="6.6.7" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#knit-expand"><i class="fa fa-check"></i><b>6.6.7</b> 使用 <code>knitr::knit_expand()</code> 来生成 Rmd 源代码</a></li>
+<li class="chapter" data-level="6.6.8" data-path="rmarkdown-operation.html"><a href="rmarkdown-operation.html#repeat-label"><i class="fa fa-check"></i><b>6.6.8</b> 允许代码块中的标签重复 (*)</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html"><i class="fa fa-check"></i><b>7</b> 使用R Markdown开展项目工作</a>
+<li class="chapter" data-level="7" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html"><i class="fa fa-check"></i><b>7</b> 使用 R Markdown 开展项目工作</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#project-manage"><i class="fa fa-check"></i><b>7.1</b> 使用 R Markdown 在工作中管理项目</a>
 <ul>
 <li class="chapter" data-level="7.1.1" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#external-r"><i class="fa fa-check"></i><b>7.1.1</b> 来自外部的 R 脚本</a></li>
 <li class="chapter" data-level="7.1.2" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#external-read"><i class="fa fa-check"></i><b>7.1.2</b> 将外部脚本读取到一个块中</a></li>
-<li class="chapter" data-level="7.1.3" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#从外部脚本读取多个代码块-external-multi"><i class="fa fa-check"></i><b>7.1.3</b> 从外部脚本读取多个代码块 (*) {#external-multi}</a></li>
-<li class="chapter" data-level="7.1.4" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#子文档-child-document"><i class="fa fa-check"></i><b>7.1.4</b> 子文档 (*) {#child-document}</a></li>
+<li class="chapter" data-level="7.1.3" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#external-multi"><i class="fa fa-check"></i><b>7.1.3</b> 从外部脚本读取多个代码块 (*)</a></li>
+<li class="chapter" data-level="7.1.4" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#child-document"><i class="fa fa-check"></i><b>7.1.4</b> 子文档 (*)</a></li>
 <li class="chapter" data-level="7.1.5" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#keep-plot"><i class="fa fa-check"></i><b>7.1.5</b> 保留图像文件</a></li>
 <li class="chapter" data-level="7.1.6" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#chunk-directory"><i class="fa fa-check"></i><b>7.1.6</b> R 代码块的工作目录</a></li>
 </ul></li>
@@ -365,11 +394,11 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="7.2.1" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#rstudio-shortcut"><i class="fa fa-check"></i><b>7.2.1</b> 使用 RStudio 键盘快捷键</a></li>
 <li class="chapter" data-level="7.2.2" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#spell-check"><i class="fa fa-check"></i><b>7.2.2</b> R Markdown 的拼写检查</a></li>
-<li class="chapter" data-level="7.2.3" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#render-rmd"><i class="fa fa-check"></i><b>7.2.3</b> 用 rmarkdown::render() 呈现 R Markdown</a></li>
+<li class="chapter" data-level="7.2.3" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#render-rmd"><i class="fa fa-check"></i><b>7.2.3</b> 用 <code>rmarkdown::render()</code> 呈现 R Markdown</a></li>
 <li class="chapter" data-level="7.2.4" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#parameterized-reports"><i class="fa fa-check"></i><b>7.2.4</b> 参数化的报告</a></li>
-<li class="chapter" data-level="7.2.5" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#自定义-knit-按钮-customize-button"><i class="fa fa-check"></i><b>7.2.5</b> 自定义 Knit 按钮 (*) {#customize-button}</a></li>
+<li class="chapter" data-level="7.2.5" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#customize-button"><i class="fa fa-check"></i><b>7.2.5</b> 自定义 <code>Knit</code> 按钮 (*)</a></li>
 <li class="chapter" data-level="7.2.6" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#google-drive"><i class="fa fa-check"></i><b>7.2.6</b> 通过 Google Drive 对 Rmd 文档进行协作</a></li>
-<li class="chapter" data-level="7.2.7" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#workflowr-web"><i class="fa fa-check"></i><b>7.2.7</b> 用 workflowr 将R Markdown项目组织到一个研究网站上</a></li>
+<li class="chapter" data-level="7.2.7" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#workflowr-web"><i class="fa fa-check"></i><b>7.2.7</b> 用 <code>workflowr</code> 将 R Markdown 项目组织到一个研究网站上</a></li>
 <li class="chapter" data-level="7.2.8" data-path="rmarkdown-project.html"><a href="rmarkdown-project.html#github-actions"><i class="fa fa-check"></i><b>7.2.8</b> 使用 GitHub Actions 实现自动化部署</a></li>
 </ul></li>
 </ul></li>
@@ -394,42 +423,70 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="rmarkdown-intro" class="section level1" number="1">
-<h1><span class="header-section-number">第 1 章</span> R Markdown概述</h1>
-<div id="rmarkdown-source" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> R Markdown 的渊源</h2>
-<div id="knitr-sweave" class="section level3" number="1.1.1">
-<h3><span class="header-section-number">1.1.1</span> knitr 和 Sweave</h3>
+<div id="rmarkdown-intro" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">第 1 章</span> R Markdown概述<a href="rmarkdown-intro.html#rmarkdown-intro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="rmarkdown-source" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> R Markdown 的渊源<a href="rmarkdown-intro.html#rmarkdown-source" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>在过去的十多年间，R 语言发展的十分迅猛，这其中就包括了 R Markdown。这段往事可能要追溯到 2007 年。那时候，还在中国人民大学上学的谢益辉开始使用 Sweave，并沉迷于此无法自拔。不仅自己在写作业的时候尽可能的使用 Sweave，还持之以恒地向同学们兜售。Sweave 的命名是 S + weave，前者指的是 S 语言，这是 R 语言的前身，后者含义即“编织”。Sweave 之所以受到谢同学的追捧，正是因为它可以将某些东西编织起来——代码和代码执行后的结果。直到今天，Sweave 仍然是 RStudio 中从 Rnw 文档生成 PDF 的重要工具之一。</p>
+<p>不过，因为 Sweave 中存在某些非常不好用的特性，所以对 Sweave 的痴迷也让谢益辉“深受其害”。这种痛苦和挣扎成为促使他开发 knitr <span class="citation">(<a href="#ref-R-knitr" role="doc-biblioref">Xie 2022c</a>)</span> 的源动力<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>。显而易见，knitr 的编写从一开始就受 Sweave 影响，甚至命名的逻辑都是一样的。knitr 是 knit + R，前者的意思仍然是“编织”，后者则是 R 语言。而且 knitr 的读音听起来就跟另一个单词“neater”是一样的，给人一种更加灵巧的感觉！</p>
+<p>时至今日，knitr 是 CRAN 中依赖最多的包之一（<a href="https://blog.csdn.net/qq_18055167/article/details/104374971" class="uri">https://blog.csdn.net/qq_18055167/article/details/104374971</a>），与另外的 4600 多个包存在依赖、被依赖、建议安装等关系。rmarkdown 排第四，与 CRAN 中的其它软件包有超过 3600 种各类联系。</p>
+<p>虽然 knitr 的编写受到 Sweave 影响，但模块化程度更高，扩展方便，支持文档类型也更多（Sweave 主要用于 LaTeX 文档）。与此同时，Sweave 中的一些优良特性也被 knitr 继承了下来，例如行内代码。从这个意义上说，Sweave 是 knitr 的“爸爸”。而 knitr 也其它一些包的“爸爸”，其中的一个就是 rmarkdown <span class="citation">(<a href="#ref-R-rmarkdown" role="doc-biblioref">Allaire, Xie, McPherson, et al. 2022</a>)</span>。knitr 包和 rmarkdown 包，以及其它一些扩展 R Markdown 功能的软件包，都是实现 R Markdown 功能的基础设施。最终，这些包一起成就了 R Markdown 的庞大生态系统。</p>
+<p>回过头来看，当年谢益辉写 knitr 包只是为了更方便地完成自己的作业，而 knitr 可以写作业，也可以用来写数据分析报告，碰巧做数据分析的人都要写报告。在 knitr 之前有 Sweave，他用了好几年，刚开始觉得很兴奋，用着用着就到了四处碰壁的状态，觉得<strong>一个绝妙的想法</strong>不幸得到了一个蹩脚的实现。直到后来决定推倒重写算了。</p>
+<p>在谈到开发经验时，他谈到：</p>
+<blockquote>
+<p>不用看远方，就看你自身能感受到的非常痛苦的问题。如果你能解决自己的一个非常痛而且频繁出现的痛点，那么有相当大的概率你也会造福别人，从而产生重大影响。</p>
+<p>解决的问题越基础越好，比如大家常用工作流程中必经的一步，这一步也许已经有现成解决方案了，但每个月总有那么三十来天让你对这个解决方案感到不满。越基础的问题，影响的人群就越广。
+—— 谢益辉（2018）</p>
+</blockquote>
+<p>2021 年，在巴西举行的 R-Day 会议上，谢益辉曾经官方解释过这段历史，感兴趣的读者不妨去看一下“Knitr 亲述历史”：<a href="https://slides.yihui.org/2021-Brazilian-R-Day.html" class="uri">https://slides.yihui.org/2021-Brazilian-R-Day.html</a>。</p>
+<div id="r-markdown-literate-programming" class="section level3 hasAnchor" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> R Markdown 与文学化编程<a href="rmarkdown-intro.html#r-markdown-literate-programming" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>初学者可能会认为 rmarkdown 软件包就是 R Markdown，但是事实并非如此。R Markdown 是文学化编程的一种实现方式，她包含了一系列的工具和软件包，而本书只能介绍其中有限的几个。文学化编程就是前面刚刚提及的<strong>一个绝妙的想法</strong>，她是高德纳（Knuth, Donald E.）在 1984 年提出的编程方法，旨在取代结构化编程范型。文学编程范型让程序员用他们自己思维内在的逻辑和流程所要求的顺序开发程序，而且用人类日常使用的语言写出来，就好像一篇文章一样。</p>
+<p>文学化编程本来是为了编程和写文档两个目的而生的，想法看起来很好，但其实这两件事情都没有很方便地完成。编程通常就是代码加注释，大家都熟悉这个套路，没有人在代码之间长篇大论写文档来解释这里的代码在干什么；文档通常也是相对独立于代码的。嵌入了代码的文档或嵌入了文档的代码对于一般读者来说都不易读，所以总而言之，文学化编程本来是一个坏主意。</p>
+<p>然而，文学化编程范式却无意间影响了可重复的科学研究。它不适合写代码，但适合写数据分析报告。数据分析比纯写代码有趣，因为结果经常是图文并茂，但数据分析的过程往往是一团糟，这里就是文学化编程的想法能发力的地方。代码嵌入文档中的目的不是为了单纯的编译，而是为了出结果（图表等）。代码和文档结合之后，也便于动态控制输出结果<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>。</p>
 </div>
-<div id="mark-pandoc" class="section level3" number="1.1.2">
-<h3><span class="header-section-number">1.1.2</span> 标记语言和 Pandoc 转换器</h3>
 </div>
+<div id="rmarkdown-example" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> 以案例形式初识 R Markdown<a href="rmarkdown-intro.html#rmarkdown-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="example-report" class="section level3 hasAnchor" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> 数据分析报告<a href="rmarkdown-intro.html#example-report" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="rmarkdown-example" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> 以案例形式初识 R Markdown</h2>
-<div id="example-report" class="section level3" number="1.2.1">
-<h3><span class="header-section-number">1.2.1</span> 数据分析报告</h3>
+<div id="example-note" class="section level3 hasAnchor" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> 交互笔记本<a href="rmarkdown-intro.html#example-note" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="example-note" class="section level3" number="1.2.2">
-<h3><span class="header-section-number">1.2.2</span> 交互笔记本</h3>
+<div id="example-cv" class="section level3 hasAnchor" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> 个人简历<a href="rmarkdown-intro.html#example-cv" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="example-report" class="section level3" number="1.2.3">
-<h3><span class="header-section-number">1.2.3</span> 个人简历</h3>
+<div id="example-resume" class="section level3 hasAnchor" number="1.2.4">
+<h3><span class="header-section-number">1.2.4</span> 网站<a href="rmarkdown-intro.html#example-resume" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="example-resume" class="section level3" number="1.2.4">
-<h3><span class="header-section-number">1.2.4</span> 网站</h3>
+<div id="example-ppt" class="section level3 hasAnchor" number="1.2.5">
+<h3><span class="header-section-number">1.2.5</span> 幻灯片<a href="rmarkdown-intro.html#example-ppt" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="example-ppt" class="section level3" number="1.2.5">
-<h3><span class="header-section-number">1.2.5</span> 幻灯片</h3>
+<div id="example-forms" class="section level3 hasAnchor" number="1.2.6">
+<h3><span class="header-section-number">1.2.6</span> 交互报表<a href="rmarkdown-intro.html#example-forms" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="example-forms" class="section level3" number="1.2.6">
-<h3><span class="header-section-number">1.2.6</span> 交互报表</h3>
-</div>
-<div id="example-dynamic" class="section level3" number="1.2.7">
-<h3><span class="header-section-number">1.2.7</span> 动态文档</h3>
+<div id="example-dynamic" class="section level3 hasAnchor" number="1.2.7">
+<h3><span class="header-section-number">1.2.7</span> 动态文档<a href="rmarkdown-intro.html#example-dynamic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 
 </div>
 </div>
+</div>
+<h3>参考文献<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-R-rmarkdown" class="csl-entry">
+Allaire, JJ, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin Ushey, Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, and Richard Iannone. 2022. <em>Rmarkdown: Dynamic Documents for r</em>. <a href="https://CRAN.R-project.org/package=rmarkdown">https://CRAN.R-project.org/package=rmarkdown</a>.
+</div>
+<div id="ref-R-knitr" class="csl-entry">
+———. 2022c. <em>Knitr: A General-Purpose Package for Dynamic Report Generation in r</em>. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>谢益辉曾经说过自己“受过几年 Sweave 折磨，最后才揭竿而起。”<a href="rmarkdown-intro.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>上述两段文字摘自谢益辉博客 2014 年 1 月 3 日的一篇文章，有删改。原文见：<a href="https://yihui.org/cn/2014/01/literate-programming/" class="uri">https://yihui.org/cn/2014/01/literate-programming/</a>。<a href="rmarkdown-intro.html#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
 <div id="disqus_thread"></div>
 <script>
@@ -459,15 +516,14 @@ div.csl-indent {
 <a href="rmarkdown-base.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
-<script src="libs/gitbook/js/app.min.js"></script>
-<script src="libs/gitbook/js/lunr.js"></script>
-<script src="libs/gitbook/js/clipboard.min.js"></script>
-<script src="libs/gitbook/js/plugin-search.js"></script>
-<script src="libs/gitbook/js/plugin-sharing.js"></script>
-<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook/js/jquery.highlight.js"></script>
-<script src="libs/gitbook/js/plugin-clipboard.js"></script>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -501,11 +557,11 @@ gitbook.start({
 },
 "download": null,
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
-"collapse": "section"
+"collapse": "none"
 }
 });
 });
